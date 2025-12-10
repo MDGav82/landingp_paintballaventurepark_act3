@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      // 👇 AJOUTEZ JUSTE CETTE LIGNE ICI
+      // C'EST INDISPENSABLE POUR GITHUB PAGES
       base: '/landingp_paintballaventurepark_act3/',
       
       server: {

@@ -1,12 +1,16 @@
 import { Activity } from './types';
 
+// 1. On récupère le chemin de base dynamique (défini dans vite.config.ts)
+const BASE_URL = import.meta.env.BASE_URL;
+
 export const ACTIVITIES: Activity[] = [
   {
     id: 'paintball',
     title: 'Paintball',
     description: 'Adrénaline et stratégie sur nos terrains scénarisés.',
     fullDescription: "Le classique indémodable. Affrontez vos amis sur nos terrains aménagés avec bunkers, forteresses et obstacles naturels. Idéal pour les enterrements de vie de garçon, anniversaires ou team building. Équipement complet fourni (masque, marqueur, combinaison).",
-    image: '/paintball.jpg',
+    // 2. On concatène la base + le nom du fichier (sans le / au début pour éviter les doubles //)
+    image: `${BASE_URL}paintball.jpg`,
     minPlayers: 6,
     minAge: 12,
     price: '25€ / pers'
@@ -16,7 +20,7 @@ export const ACTIVITIES: Activity[] = [
     title: 'Gellyball',
     description: 'Le paintball sans douleur pour les plus jeunes.',
     fullDescription: "Découvrez le Gellyball, une alternative au paintball utilisant des billes d'eau gélifiées. Pas de peinture, pas de douleur, mais tout autant de fun ! Parfait pour les anniversaires d'enfants ou les familles qui veulent s'amuser sans impact.",
-    image: '/gellyball.jpg',
+    image: `${BASE_URL}gellyball.jpg`,
     minPlayers: 4,
     minAge: 6,
     price: '15€ / pers'
@@ -26,7 +30,7 @@ export const ACTIVITIES: Activity[] = [
     title: 'Airsoft',
     description: 'Simulation militaire réaliste et tactique.',
     fullDescription: "Plongez dans l'immersion totale. Nos scénarios d'Airsoft sont conçus pour les amateurs de simulation militaire (Milsim). Répliques réalistes, objectifs tactiques et travail d'équipe sont au rendez-vous. Fair-play obligatoire.",
-    image: '/airsoft.jpg',
+    image: `${BASE_URL}airsoft.jpg`,
     minPlayers: 6,
     minAge: 18,
     price: '30€ / pers'
@@ -36,7 +40,7 @@ export const ACTIVITIES: Activity[] = [
     title: 'Laser',
     description: 'Laser game en extérieur, précis et fun.',
     fullDescription: "Le Laser Game sort des salles obscures ! Profitez du grand air avec nos équipements infrarouges dernière génération. Portée de 150m, pas de projectiles, juste de la précision et de la stratégie. Accessible à tous.",
-    image: '/laser.jpg',
+    image: `${BASE_URL}laser.jpg`,
     minPlayers: 4,
     minAge: 7,
     price: '18€ / pers'
@@ -46,7 +50,7 @@ export const ACTIVITIES: Activity[] = [
     title: 'Lancer de haches',
     description: 'Réveillez le Viking qui sommeille en vous.',
     fullDescription: "Une activité insolite et défoulante. Apprenez l'art du lancer de hache sur nos cibles en bois sécurisées. Nos instructeurs vous guideront pour réussir le planté parfait. Compétitions amicales et bonne humeur garanties.",
-    image: '/hache.jpg',
+    image: `${BASE_URL}hache.jpg`,
     minPlayers: 2,
     minAge: 16,
     price: '12€ / pers'
@@ -56,7 +60,7 @@ export const ACTIVITIES: Activity[] = [
     title: 'Archery Tag',
     description: 'La balle aux prisonniers avec des arcs.',
     fullDescription: "Un mélange explosif entre le tir à l'arc et la balle aux prisonniers. Équipés d'arcs et de flèches à embouts en mousse, visez vos adversaires ou les cibles pour remporter la victoire. Dynamique et sécurisé.",
-    image: '/arc.jpg',
+    image: `${BASE_URL}arc.jpg`,
     minPlayers: 6,
     minAge: 10,
     price: '20€ / pers'
@@ -66,7 +70,7 @@ export const ACTIVITIES: Activity[] = [
     title: 'Bubble Foot',
     description: 'Du foot, des bulles et beaucoup de chocs !',
     fullDescription: "Enfermé dans une bulle géante transparente, jouez au foot comme jamais auparavant. Les chocs sont indolores mais hilarants. Rebondissez, roulez et essayez de marquer des buts dans le chaos le plus total.",
-    image: '/bubblef.jpg',
+    image: `${BASE_URL}bubblef.jpg`,
     minPlayers: 8,
     minAge: 10,
     price: '22€ / pers'

@@ -3,10 +3,12 @@ import ActivityGrid from './components/ActivityGrid';
 import ActivitySection from './components/ActivitySection';
 import { ACTIVITIES } from './constants';
 
+const baseUrl = import.meta.env.BASE_URL;
+
 // Using local images for the carousel as requested
 const HERO_IMAGES = [
-  "/hero1.jpg",
-  "/hero2.jpg"
+  `${baseUrl}hero1.jpg`,
+  `${baseUrl}hero2.jpg`
 ];
 
 function App() {
@@ -35,7 +37,7 @@ function App() {
           <div className="flex items-center gap-3">
             {/* Logo Image */}
             <img 
-              src="/logo.png" 
+              src={`${import.meta.env.BASE_URL}logo.png`}
               alt="Aventure Paintball Park" 
               className="h-16 w-auto object-contain"
               onError={(e) => {
