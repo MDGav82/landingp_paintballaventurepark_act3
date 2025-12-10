@@ -1,10 +1,13 @@
 {
+  "homepage": "https://MDGav82.github.io/landingp_paintballaventurepark_act3",
   "name": "aventure-paintball-park---toulouse",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "preview": "vite preview"
   },
